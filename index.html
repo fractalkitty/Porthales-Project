@@ -12,7 +12,25 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-color: #f4f4f4;
+        background: no-repeat center center fixed;
+        background-size: cover;
+        position: relative;
       }
+
+      /* body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url('p5js-manholes.png');
+        background-repeat: repeat; /* This will tile the image across the entire background */
+      /* background-size: 800px 800px; This sets the size of the image */
+      /* opacity: 0.05; Adjust the opacity as desired for the fade effect */
+      /* z-index: -1; Position behind the content */
+      /* } */
       header {
         background-color: #333;
         color: #fff;
@@ -20,62 +38,186 @@
         padding: 10px 0;
         text-align: center;
       }
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 20px;
+      p {
+        margin-bottom: 20px; /* Adjust the value as needed */
       }
-      .map {
-        flex: 1;
-        min-width: 300px;
+      .content {
+        max-width: 600px;
+        margin: 20px;
+        text-align: center;
+        overflow: hidden; /* To prevent overflowing content from breaking the layout */
+      }
+      .content2 {
+        max-width: 600px;
+        margin: 20px;
+        text-align: center;
+        overflow: hidden; /* To prevent overflowing content from breaking the layout */
+      }
+
+      .intro {
+        max-width: 800px;
+        margin: 20px;
+        text-align: center;
+      }
+      .content:not(:last-child) {
+        margin-bottom: 50px;
+      }
+      .map,
+      .media,
+      .iframe-container {
         margin: 10px;
+        width: 100%; /* Adjust width as necessary */
+        height: 500px;
       }
-      .media {
-        flex: 1;
-        min-width: 300px;
-        margin: 10px;
-      }
-      iframe,
-      .map-content {
-        width: 100%;
-        height: 400px;
-        border: none;
-      }
+
       img {
         max-width: 100%;
         height: auto;
+        border-radius: 8px; /* Optional style */
       }
+      .description {
+        margin: 20px 20px;
+      }
+      .iframe-container {
+        position: relative; /* This is essential for absolute positioning of the iframe */
+        width: 90%; /* Adjust if you want a different width */
+        height: 450px; /* Set a fixed height or as per requirement */
+      }
+.content3 {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+}
+      iframe {
+        position: relative;
+        top: 0;
+        left: 5%;
+        width: 100%;
+        height: 100%;
+        border: none;
+        overflow: auto;
+      }
+      .centered-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%; /* You can adjust this to fit the size you want */
+        max-width: 100%; /* This ensures the image is not larger than its container */
+        height: auto; /* This keeps the image's aspect ratio intact */
+      }
+      .process {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+      ul {
+  list-style-type: disc; /* Choose 'none' if you don't want any bullets */
+  padding-left: 20px; /* Adjust the padding to align the list nicely */
+  margin-top: 20px; /* Add space before the list starts */
+}
+
+li {
+  margin-bottom: 10px; /* Space between list items */
+  line-height: 1.6; /* Makes text within a list item more readable */
+}
+
+li a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Removes underline from links */
+}
+
+li a:hover {
+  text-decoration: underline; /* Adds underline on hover for links */
+}
     </style>
   </head>
   <body>
     <header>
-      <h1>Dashboard Title</h1>
+      <h1>Porthales of Salem, OR</h1>
+      <h5>
+        Use at your own risk - stay on pedestrian paths. Don't play with
+        manholes. Need I say - this is pure fiction.
+      </h5>
     </header>
+    <div class="intro">
+      <p>
+        In the city of Salem, something mysterious is going on. There appears to
+        be a change in the ~10,000 manholes that line our streets. They seem to
+        have transformed into portals with a destination, a code name, and a
+        risk level.
+      </p>
+      <img
+        src="manhole.jpg"
+        alt="Descriptive Text for Image"
+        class="centered-image"
+      />
 
-    <div class="container">
-      <!-- Map -->
+      <p>
+        Is this a porthole or a portal? It's a 'porthale' (both). You decide
+        whether to glimpse or transport your imagination into these realms. I
+        encourage you to write, wax poetic, discuss, and imagine. As you walk -
+        what do you ponder?
+      </p>
+    </div>
+
+    <!-- Map Section -->
+    <div class="content">
       <div class="map">
-        <h2>Interactive Map</h2>
-        <div class="map-content">
-          <!-- Embed your map HTML -->
-          <iframe src="test2.html"></iframe>
+        <h2>Map</h2>
+
+        <p class="description">
+          Find a 'porthale', go on a scavanger hunt, see what adventures await.
+          Write a story, poem, or song. Heed the risk. Full page view
+
+          <!--link to map-->
+          <a href="https://porthales-of-salem.glitch.me/" target="_blank"
+            >here.</a
+          >
+        </p>
+
+        <p></p>
+        <div class="iframe-container">
+          <iframe
+            src="https://porthales-of-salem.glitch.me/"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
-
-      <!-- Image -->
-      <div class="media">
-        <h2>Images</h2>
-        <!-- Replace 'image-source.jpg' with your image file -->
-        <img src="image-source.jpg" alt="Description of Image" />
-      </div>
-
-      <!-- Iframe Embeds -->
-      <div class="media">
-        <h2>Additional Iframe</h2>
-        <!-- Replace 'link-to-iframe-content' with your iframe link -->
-        <iframe src="link-to-iframe-content"></iframe>
-      </div>
     </div>
+    <p class="content2">
+      Notes: The inner ellipse has ~65% of manholes, the middle has ~95% and the
+      outer as ~99.7%. The centroid of these portals is at the center of the
+      ellipse.
+    </p>
+
+    <!-- Image Section -->
+    <section>
+      <div class="content3">
+        <p></p>
+        <h3>About</h3>
+        <p class="process">
+          This map was made using the following:
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://data.cityofsalem.net/datasets/salem::public-storm-manhole/explore?location=44.920922%2C-123.005382%2C11.52"
+              target="_blank"
+              >Storm manhole data from the City of Salem, OR</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://codepen.io/fractalkitty/full/NWobbWQ/5f63f722c3f45f87a87ca33d4cda7de2"
+              target="_blank"
+              >p5js code for initial prototype</a
+            >
+            </li>
+            <li>Python along with multiple libraries including pandas, folium, numpi/scipi, etc. </li>
+            <li>Glitch for hosting the map.</li>
+            <li>GitHub for hosting the code.</li>
+            <li>ChatGPT 4 for debugging and chat for css, python, and html. (this was my first use of pandas a folium)</li>
+        </ul>
+    </section>
   </body>
 </html>
