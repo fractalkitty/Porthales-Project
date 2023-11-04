@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .map {
+        flex: 1;
+        min-width: 300px;
+        margin: 10px;
+      }
+      .media {
+        flex: 1;
+        min-width: 300px;
+        margin: 10px;
+      }
+      iframe,
+      .map-content {
+        width: 100%;
+        height: 400px;
+        border: none;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Dashboard Title</h1>
+    </header>
+
+    <div class="container">
+      <!-- Map -->
+      <div class="map">
+        <h2>Interactive Map</h2>
+        <div class="map-content">
+          <!-- Embed your map HTML -->
+          <iframe src="test2.html"></iframe>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="media">
+        <h2>Images</h2>
+        <!-- Replace 'image-source.jpg' with your image file -->
+        <img src="image-source.jpg" alt="Description of Image" />
+      </div>
+
+      <!-- Iframe Embeds -->
+      <div class="media">
+        <h2>Additional Iframe</h2>
+        <!-- Replace 'link-to-iframe-content' with your iframe link -->
+        <iframe src="link-to-iframe-content"></iframe>
+      </div>
+    </div>
+  </body>
+</html>
