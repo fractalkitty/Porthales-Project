@@ -1,3 +1,4 @@
+# DO NOT USE - learning purposes only - makes map, but label is missing and no covariances
 import folium
 from folium.plugins import MarkerCluster
 import json

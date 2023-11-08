@@ -118,7 +118,7 @@
           ]
         ]
       },
-      "properties": { "name": "1.5-σ ellipse" }
+      "properties": { "name": "1σ ellipse" }
     },
     {
       "type": "Feature",
@@ -229,7 +229,7 @@
           ]
         ]
       },
-      "properties": { "name": "2.49σ ellipse" }
+      "properties": { "name": "2σ ellipse" }
     },
     {
       "type": "Feature",
@@ -340,7 +340,7 @@
           ]
         ]
       },
-      "properties": { "name": "3.44σ ellipse" }
+      "properties": { "name": "3σ ellipse" }
     }
   ]
 }

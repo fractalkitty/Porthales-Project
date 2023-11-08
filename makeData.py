@@ -67,11 +67,6 @@ locations = [
     "Woods", "Ziggurat"
 ]
 
-
-
-
-
-
   
 
 # Function to generate anagrams
@@ -86,9 +81,8 @@ def generate_anagrams(source, number):
 
     return list(anagrams)  # Convert the set to a list to return
 
-# Generate 11,000 anagrams from "Salem Oregon"
+# Generate 10,083 anagrams from "Salem Oregon"
 anagrams = generate_anagrams("salem oregon", npoints)
-
 
 # Create all possible combinations and format them as "<adjective> <location>"
 all_combinations = [' '.join(comb) for comb in itertools.product(adjectives, locations)]
@@ -105,7 +99,6 @@ riskLevels = ['You should be fine.', 'You might want to bring a friend.', 'You s
 # generate an array of random risk levels for each point
 risks =  random.choices(riskLevels, k=npoints)
 
-
 csv_file_path = 'Manholes-Salem.csv'
 
 df = pd.read_csv(csv_file_path)
@@ -116,8 +109,6 @@ column_name = 'Y'
 y_data = df[column_name].tolist()
 column_name = 'UNITID' 
 id_data = df[column_name].tolist()
-
-
 
  # Open a new CSV file for writing
 with open('porthales.csv', 'w', newline='') as file:
