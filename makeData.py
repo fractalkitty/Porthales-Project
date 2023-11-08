@@ -1,3 +1,4 @@
+#make a csv file with random names and locations and keep ID and x and y coords
 import csv
 import random
 import string
